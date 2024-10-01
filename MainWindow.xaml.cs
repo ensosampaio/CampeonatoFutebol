@@ -92,6 +92,7 @@ namespace CampeonatoFutebol
                     time.nome = txtNomeTime.Text;
                     time.estado = txtEstadoTime.Text;
                     time.cidade = txtCidadeTime.Text;
+                   
 
                     if (time.RegistrarTime())
                     {
@@ -126,11 +127,12 @@ namespace CampeonatoFutebol
             {
                 if (!txtNomeJogador.Text.Equals("") && !txtNumeroJogador.Text.Equals("") && !txtPosicaoJogador.Text.Equals("") && cmbTimes.SelectedItem != null)
                 {
+                    int timeId = (int)((ComboBoxItem)cmbTimes.SelectedItem).Tag;
                     Jogador jogador = new Jogador();
                     jogador.Nome = txtNomeJogador.Text;
                     jogador.Posicao = txtPosicaoJogador.Text;
                     jogador.Numero = int.Parse(txtNumeroJogador.Text);
-                    jogador.TimeID = (int)cmbTimes.SelectedValue;
+                    jogador.TimeID = timeId;
                     if (jogador.registrarJogador())
                     {
                         MessageBox.Show("Jogador cadastrado com sucesso!");
