@@ -180,7 +180,7 @@ namespace CampeonatoFutebol
                         txtEstadoEstadio.Clear();
                         txtCidadeEstadio.Clear();
                         txtNomeEstadio.Clear();
-                        CarregarTimes();
+                        CarregarEstadios();
                     }
                     else
                     {
