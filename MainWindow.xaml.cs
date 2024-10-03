@@ -100,6 +100,7 @@ namespace CampeonatoFutebol
                         txtCidadeTime.Clear();
                         txtEstadoTime.Clear();
                         txtNomeTime.Clear();
+                        CarregarTimes();
                     }
                     else
                     {
